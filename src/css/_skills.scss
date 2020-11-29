@@ -1,0 +1,17 @@
+.skills {
+    background: url(../img/skills-bg.jpg) no-repeat center;
+    background-size: cover;
+    .section__layer {
+        width: 100%;
+        height: 100%;
+        padding: $billetPadding;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba($color: $skillsColor, $alpha: 0.95);
+        h2 {
+            margin-bottom: 5vh;
+        }
+    }
+}

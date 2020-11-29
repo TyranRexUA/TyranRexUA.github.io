@@ -1,0 +1,22 @@
+section.contact.section(data-anchor='contact')
+    .section__layer
+        h2.title.contact__title CONTACT
+        .contact__block
+            a.contact__item.tel(href='tel:+380501510568')
+                span.icon-phone
+                span.text +380501510568
+
+            a.contact__item.mail(href='mailto:tyranrexua@gmail.com')
+                span.icon-mail
+                span.text tyranrexua@gmail.com
+
+            a.contact__item.telegram(href='tg://resolve?domain=TyranRex')
+                span.icon-telegram
+                span.text @TyranRex
+
+        form.contact__form
+            input(type="text", name="name", placeholder="Name")
+            input(type="email", name="email", placeholder="Email")
+            input(type="tel", name="tel", placeholder="Mobile")
+            textarea(name="message", rows="7", placeholder="Your Message")
+            button(type="submit") Submit
