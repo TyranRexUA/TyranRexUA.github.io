@@ -26,7 +26,7 @@ $(document).ready(function () {
   }); //====================== TYPE IT =========================
 
   $('.typeIt').typeIt({
-    strings: ["Front-end Developer (ReactJs)"],
+    strings: ["Front-end Developer (React)"],
     speed: 200,
     loop: true,
     autoStart: false
@@ -55,6 +55,13 @@ $(document).ready(function () {
       height: tagHeight / 1.15,
       target: '_top',
       tooltip: 'HTML'
+    }, {
+      image: './img/icons/nextjs.svg',
+      url: '',
+      width: tagWidth / 1.15,
+      height: tagHeight / 1.15,
+      target: '_top',
+      tooltip: 'next.js'
     }, {
       image: './img/icons/css.svg',
       url: '',
