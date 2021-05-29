@@ -2,22 +2,8 @@ $(document).ready(function () {
 
     //============= fullPageScroll ============================
 
-    // $('.wrapper').fullpage({
-    //     scrollingSpeed: 750,
-    //     verticalCentered: false,
-    //     anchors: ['home', 'skills', 'portfolio', 'contact'],
-    //     recordHistory: false,
-    //     animateAnchor: false,
-    //     touchSensitivity: 65,
-    //     //autoScrolling:false,
-    //     menu: '.menu',
-    //     //parallax: true,
-    //     //scrollBar: true,
-    // })
-
     $('.wrapper').pagepiling({
         anchors: ['home', 'skills', 'portfolio', 'contact'],
-        //anchors: ['about', 'experience', 'skills', 'portfolio', 'contact'],
         scrollingSpeed: 1000,
         menu: '.menu',
         navigation: false,
@@ -29,22 +15,11 @@ $(document).ready(function () {
     //====================== TYPE IT =========================
 
     $('.typeIt').typeIt({
-        strings: ["Front-end Developer (ReactJs)"],
+        strings: ["Front-end Developer (React)"],
         speed: 200,
         loop: true,
         autoStart: false
     }).tiPause(3000).tiDelete(30).tiType('HTML-coder').tiPause(3000);
-
-    // new TypeIt(".typeIt", {
-    //     strings: ["Front-end Developer"],
-    //     speed: 200,
-    //     loop: true,
-    //     autoStart: false
-    // })
-    // .pause(300)
-    // .delete(null)
-    // .type('HTML-coder', {delay: 3000})
-    // .go()
 
     //===================== ПОЯВАЛЕНИЕ ЕЛЕМЕНТОВ =================
 
@@ -59,6 +34,7 @@ $(document).ready(function () {
         entries: [
 
             { image: './img/icons/html.svg', url: '', width: tagWidth / 1.15, height: tagHeight / 1.15, target: '_top', tooltip: 'HTML' },
+            { image: './img/icons/nextjs.svg', url: '', width: tagWidth / 1.15, height: tagHeight / 1.25, target: '_top', tooltip: 'next.js' },
             { image: './img/icons/css.svg', url: '', width: tagWidth / 1.15, height: tagHeight / 1.15, target: '_top', tooltip: 'CSS' },
             { image: './img/icons/javascript.svg', url: '', width: tagWidth / 1.15, height: tagHeight / 1.15, target: '_top', tooltip: 'Javascript' },
             { image: './img/icons/jquery.svg', url: '', width: tagWidth * 1.5, height: tagHeight, target: '_top', tooltip: 'jQuery' },
@@ -77,11 +53,10 @@ $(document).ready(function () {
         height: tagCloudSize,
         speed: 0.2,
         bgDraw: false,
-        opacityOut: .1,
-        // tooltipDiffX: 0,
+        opacityOut: .2,
         tooltipDiffY: 20,
         tooltipTextAnchor: 'start',
-        tooltipFontWeight: 'bold', //bold
+        tooltipFontWeight: 'bold',
     });
 
     $('.tagCloud a').on('click', (event) => event.preventDefault());
@@ -96,7 +71,6 @@ $(document).ready(function () {
     (function () {
         let colsInSlideCount = Math.floor($('.slider').width() / $('.card').outerWidth(true));
         let rowsInSlideCount = Math.floor(($(window).innerHeight() - $('.slider').offset().top - $('.nav').height()) / ($('.card').outerHeight(true)));
-        //ath.floor( ( $('.slider').innerHeight() - 60 ) / ($('.card').outerHeight() + 5))
         if (colsInSlideCount == 1 || colsInSlideCount == 0) {
             slideItemsCount = rowsInSlideCount;
         } else if (rowsInSlideCount == 1 || rowsInSlideCount == 0) {
@@ -224,14 +198,6 @@ $(document).ready(function () {
     }
 
     //===================================== ЗАПРОС В ГУГЛ ТАБЛИЦУ ====================================
-
-    // $('form').submit(function() {
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "https://script.google.com/macros/s/AKfycbyTbSePo5ifKWrblOvN8nfoPVofmqQzqo8yhsqyFqZm1pYQANm1/exec",
-    //         data: $('form').serialize(),
-    //     })
-    // })
 
     $('form').submit(function () {
         let srcHTML = $('form').html();
